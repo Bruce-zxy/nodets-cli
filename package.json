@@ -1,12 +1,12 @@
 {
-  "name": "create-node-ts",
+  "name": "nodets-cli",
   "version": "1.0.0",
-  "description": "",
+  "description": "Initialize NodeJS project using TypeScript.",
   "main": "index.js",
   "scripts": {
     "start": "tsc -p tsconfig.json --watch",
     "build": "tsc -p tsconfig.json",
-    "release": "np",
+    "release": "npm login && np",
     "deduplicate": "yarn-deduplicate -s fewer yarn.lock",
     "deduplicate:check": "yarn-deduplicate -s fewer yarn.lock --list --fail",
     "lint": "yarn build && yarn lint:post-build",
@@ -17,9 +17,9 @@
   "bin": {
     "create-node-ts": "./dist/index.js"
   },
-  "keywords": [],
+  "keywords": ["nodejs", "typescript", "cli"],
   "author": "HadesZ",
-  "license": "ISC",
+  "license": "GPL-3.0-only",
   "engines": {
     "node": ">=14"
   },
@@ -34,7 +34,7 @@
     "yurnalist": "^2.1.0"
   },
   "devDependencies": {
-    "@types/node": "^16.0.1",
+    "@types/node": "^20.12.4",
     "np": "^7.5.0",
     "yarn-deduplicate": "^3.1.0"
   }
